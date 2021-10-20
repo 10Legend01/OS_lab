@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ps -xu | tail -n 1 | awk '{ print $2 }'
+ps -ax -o pid --sort=start_time | tail -n 1 #| awk '{ print $1 }'
