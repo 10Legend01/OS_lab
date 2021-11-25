@@ -37,7 +37,7 @@ for File in $(find . -type f); do
 			Update="${Update}upd: $File $File.${Date}\n"
 		fi
 	else
-		scp "$File" "$Catalog/$File"
+		cp --parents "$File" "$Catalog/"
 		echo "add: $File" >> $Report
 	fi
 done
